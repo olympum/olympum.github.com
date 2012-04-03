@@ -316,7 +316,7 @@ Y.on("click", handleClick, "mylink");
         <pre class="prettyprint"><code class="language-js">YUI.add('galleryModelFlickr', function(Y) {
 // register model in Y.mojito.models namespace.
 Y.namespace('mojito.models').gallery = {
-    get_photos: function(){
+    get_photos: function(callback){
       Y.YQL (flickr_query, function(rawYql) {
         if (null == rawYql || 0 == rawYql.query.count) {
           callback ([]);
@@ -437,9 +437,10 @@ ac.error('oops');
 
     <div id="thankyou" class="step slide" data-x="-3000" data-y="3500" data-scale="1">
         <q>mixology at the mojito bar</q>
-        <p>give mojito a try!</p>
+		<p>free t-shirt, free mojitos - open today &amp; tomorrow</p>
+        <p>talk to y! developers, give mojito a try!</p>
         <p>bonus cocktails: grasshopper &amp; manhattan<p>
-        <q>thank you!</q>
+		<p>shaker talk tomorrow by Julien Lecomte</p>
     </div>
 
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="16">
